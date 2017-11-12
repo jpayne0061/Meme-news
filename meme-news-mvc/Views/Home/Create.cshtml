@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-xs-12">
+            <div class="meme-container meme-text">
+                
+
+            </div>
+
+            <div id="meme-input">
+                <input type="text" placeholder="top" id="top-text">
+                <input type="text" placeholder="bottom" id="bottom-text">
+
+                <span id="set-text">Set Text</span>
+                <div class="btn btn-primary" id="submit-meme">Submit Meme</div>
+            </div>
+
+            
+        </div>
+        <div class="col-md-4 col-xs-12">
+            @{string path = Server.MapPath("~/Content/Memes");}
+            @{ string[] files = Directory.GetFiles(path); }
+            @foreach (string file in files)
+            {
+                string f = System.IO.Path.GetFileName(file);
+                <div>
+                    <img src=@("/Content/Memes/" + f) class="side-bar-memes" >
+                </div>
+            }
+
+
+        </div>
+    </div>
+</div>
