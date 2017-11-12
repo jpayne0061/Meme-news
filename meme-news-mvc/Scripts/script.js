@@ -1,13 +1,21 @@
 ﻿
 
-$("#set-text").on("click", function () {
-    var topText = $("#top-text").val();
-    var bottomText = $("#bottom-text").val();
+//$("#set-text").on("click", function () {
+//    var topText = $("#top-text").val();
+//    var bottomText = $("#bottom-text").val();
 
-    $(".meme-container").append("<div class='top' >" + topText + "</div>");
-    $(".meme-container").append("<div class='bottom' >" + bottomText + "</div>")
+//    $(".meme-container").append("<div id='top-message' class='top' ></div>");
+//    $(".meme-container").append("<div id='bottom-message' class='bottom' ></div>")
 
 
+//});
+
+$("#top-text").keypress(function () {
+    $("#top-message").html($(this).val());
+});
+
+$("#bottom-text").keypress(function () {
+    $("#bottom-message").html($(this).val());
 });
 
 
