@@ -18,6 +18,16 @@ $("#bottom-text").keypress(function () {
     $("#bottom-message").html($(this).val());
 });
 
+$("#top-text").keydown(function () {
+    $("#top-message").html($(this).val());
+});
+
+$("#bottom-text").keydown(function () {
+    $("#bottom-message").html($(this).val());
+});
+
+
+
 
 $("#submit-meme").on("click", function () {
 
