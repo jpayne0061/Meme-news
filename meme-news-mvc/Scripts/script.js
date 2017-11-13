@@ -40,7 +40,7 @@ function SubmitMeme()
     var topText = $("#top-text").val();
     var bottomText = $("#bottom-text").val();
 
-    var data = "<div class='top' >" + topText + "</div>" + "<div class='bottom' >" + bottomText + "</div>";
+    var data = "<div><div class='top' >" + topText + "</div></div>" + "<div><div class='bottom' >" + bottomText + "</div></div>";
 
     var imgSrc = $(".meme-with-text").attr("src");
 
